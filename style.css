@@ -1,1 +1,46 @@
+/* REGOLE GENERALI */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    height: 100vh;
+}
+
+/* MAIN */
+
+/* sidebar */
+
+/* container */
+
+/* FOOTER */
+
 
