@@ -57,6 +57,75 @@ main {
     flex-shrink: 0;
 }
 
+.logo{
+    height: 38px;
+    width: 130px;
+    margin: 20px 0 0 20px;
+}
+
+.sidebar div:not(.creaplaylist){
+    margin: 20px 0 0 20px;
+}
+
+.menu{
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu:hover, .menu.active{
+    color: white;
+}
+
+.menu svg{
+    width: 30px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu li{
+    color: greenyellow;          /* !!!!!!!! */
+}
+
+.playlist{
+    height: 500px;
+    width: 100%;
+}
+
+.playlist h3{
+    text-transform: uppercase;
+}
+
+.creaplaylist{
+    margin: 15px 0;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.creaplaylist i{
+    font-size: 40px;
+}
+
+.playlist a{
+    display: block;
+    padding: 10px 0;
+}
+
+.playlist{
+    color: grey;
+}
+
+.playlist h3{
+    color: white;
+}
+
+.icon{
+   font-size: 20px;
+   color: white;
+}
+
 /* container_main */
 
 .container_main{
