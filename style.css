@@ -9,6 +9,7 @@
 html{
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 14px;
+    color: white;
 }
 
 img {
@@ -53,14 +54,32 @@ main {
     background-color: black;
     width: 227px;
     height: calc(100vh - 88px);
+    flex-shrink: 0;
 }
 
-/* container */
+/* container_main */
 
-.container{
+.container_main{
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    overflow: scroll;
+    position: relative;
+}
+
+.upgrade{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 90px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.musica{
+    width: 100%;
+    height: calc(100% - 90px);
+    margin-top: 90px;
 }
 
 /* FOOTER */
@@ -70,5 +89,106 @@ footer{
     width: 100%;
     background-color: rgb(30,30,30);
     position: sticky;
+    padding: 0 20px;
 }
 
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    width: 100%;
+}
+
+.brano{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 25%;
+    height: 88px;
+}
+
+.brano i{
+    color: gray;
+    font-size: 18px;
+}
+
+.brano img{
+    height: 42px;
+    width: 42px;
+}
+
+.brano div{
+    margin-right: 20px;
+}
+
+.brano div span{
+    color: gray;
+    font-size: 12px;
+}
+
+.player{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 30%;
+    height: 88px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    column-gap: 20px;
+}
+
+.player i{
+    font-size: 18px;
+}
+
+.player i:nth-child(3){
+    font-size: 30px;
+}
+
+.pulsanti{
+    display: fl;
+}
+
+.timeline{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.barra{
+    width: 80%;
+    height: 4px;
+    background-color: rgb(72,72,72);
+    border-radius: 25px;
+}
+
+.time{
+    width: 15%;
+    height: 4px;
+    border-radius: 25px;
+    background-color: rgb(182,182,182);
+}
+
+.volume{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 20px;
+    width: 25%;
+    height: 88px;
+}
+
+.volume .barra{
+    width: 60%;
+}
+
+.volume .barra .time{
+    width: 20%;
+}
+
+.volume i{
+    font-size: 18px;
+}
