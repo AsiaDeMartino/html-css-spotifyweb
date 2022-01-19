@@ -53,9 +53,10 @@ main {
     display: flex;
     flex-grow: 1;
     background: rgb(16,19,25);
-    width: 100%;
+    width: calc(100% - 227px);
     height: calc(100vh - 88px);
 }
+
 
 /* sidebar */
 
@@ -68,6 +69,7 @@ main {
     justify-content: space-between;
     padding-bottom: 10px;
     flex-shrink: 0;  
+    overflow: scroll;
 }
 
 .container_sidebar{
@@ -194,16 +196,37 @@ main {
     flex-grow: 1;
     overflow: scroll;
     position: relative;
+    width: calc(100% - 227px);
+    height: calc(100vh - 88px);
+}
+
+.banner{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 227px);
+    height: 90px;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .upgrade{
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 90px;
-    width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    width: 218px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
+
+.upgrade_button{
+    text-transform: uppercase;
+}
+
 
 .musica{
     width: 100%;
