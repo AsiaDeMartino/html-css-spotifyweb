@@ -91,6 +91,7 @@ main {
     min-height: 38px;
     width: 130px;
    margin: 20px 0;
+   margin-left: 20px;
 }
 
 .menu{
@@ -316,7 +317,7 @@ footer{
     position: relative;
 }
 
-.time:hover .pallina{
+.barra:hover .pallina{
     background-color: white;
     content: "";
     display: block;
@@ -329,7 +330,7 @@ footer{
     transform: translateY(-50%);
 }
 
-.time:hover{
+.barra:hover .time{
     background-color: greenyellow;
 }
 
