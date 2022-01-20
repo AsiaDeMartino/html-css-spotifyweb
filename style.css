@@ -241,13 +241,15 @@ main {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    padding-top: 120px;
+    overflow-x: hidden;
+    padding: 120px 20px 20px 20px;
 }
 
 .categorie{
     display: flex;
     justify-content: center;
-    column-gap: 25px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .categorie ul{
@@ -277,6 +279,42 @@ main {
     margin: 5px auto;
 }
 
+.wrapper_card{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper_card h1{
+    font-size: 25px;
+    margin: 30px 0;
+}
+
+.cards{
+    display: flex;
+    column-gap: 15px;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 10px;
+    flex-shrink: 0;
+    width: 177px;
+    text-align: center;
+}
+
+.card img{
+    width: 177px;
+    height: 177px;
+    margin-bottom: 10px;
+}
+
+.card h5{
+    color: grey;
+}
 
 /* FOOTER */
 
