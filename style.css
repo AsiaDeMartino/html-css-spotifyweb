@@ -70,6 +70,7 @@ main {
     padding-bottom: 10px;
     flex-shrink: 0;  
     overflow: auto;
+    font-weight: 700;
 }
 
 .container_sidebar{
@@ -103,22 +104,22 @@ main {
     color: gray;
 }
 
-.menu svg{
+.menu img{
     width: 30px;
     margin-right: 10px;
     text-align: center;
     vertical-align: middle;
-    fill: gray;
+    opacity: 0.7;
 }
 
-.menu:hover, .menu>svg:hover{
+.menu:hover, .menu>img:hover{
     color: white;
-    fill: white;
+    opacity: 1;
 }
-
-.active, .active>svg{
+ 
+.active, .active img{
     color: white;
-    fill: white;
+    opacity: 1;
 }
 
 .playlist{
@@ -238,8 +239,8 @@ main {
 
 .musica{
     width: 100%;
-    height: calc(100% - 90px);
-    margin-top: 90px;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 /* FOOTER */
@@ -249,7 +250,7 @@ footer{
     width: 100%;
     background-color: rgb(30,30,30);
     position: sticky;
-    padding: 0 20px;
+    z-index: 100;
 }
 
 .container_footer{
@@ -262,9 +263,17 @@ footer{
 .brano{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     column-gap: 10px;
-    width: 25%;
     height: 88px;
+    flex-basis: 227px;
+    padding-left: 20px;
+}
+
+.sinister{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
 .brano span:hover{
@@ -283,15 +292,12 @@ footer{
 .brano i{
     color: gray;
     font-size: 18px;
+    margin: 0 5px;
 }
 
 .brano img{
     height: 42px;
     width: 42px;
-}
-
-.brano div{
-    margin-right: 20px;
 }
 
 .brano div span{
@@ -301,24 +307,31 @@ footer{
 
 .player{
     display: flex;
-    flex-wrap: wrap;
-    min-width: 30%;
+    flex-direction: column;
+    min-width: 40%;
     height: 88px;
     align-content: center;
     align-items: center;
     justify-content: center;
     row-gap: 15px;
+}
+
+.icon_player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 20px;
 }
 
-.player i{
+.icon_player i{
     font-size: 18px;
 }
 
 .play{
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
     text-align: center;
+    
 }
 
 .play i{
@@ -338,6 +351,7 @@ footer{
     height: 4px;
     background-color: rgb(72,72,72);
     border-radius: 25px;
+    flex-grow: 1;
 }
 
 .time{
@@ -370,8 +384,9 @@ footer{
     align-items: center;
     justify-content: flex-end;
     column-gap: 20px;
-    width: 25%;
+    width: 227px;
     height: 88px;
+    padding-right: 20px;
 }
 
 .volume .barra{
