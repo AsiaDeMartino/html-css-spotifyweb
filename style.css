@@ -315,12 +315,45 @@ main {
     color: grey;
 }
 
-.section2 h1{
+.section2 h1, .section3 h1{
     margin-bottom: 10px;
 }
 
-.section2 h5{
+.section2 h5, .section3 h5{
     margin-bottom: 30px;
+}
+
+.section3 img{
+    border-radius: 50%;
+}
+
+.card div{
+    position: relative;
+}
+
+.card i{
+    font-size: 50px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+
+.wrapper_card .active i{
+    display: initial;
+}
+
+.wrapper_card .active img{
+    filter: brightness(70%);
+}
+
+.card:hover img{
+    filter: brightness(70%);
+}
+
+.card:hover i{
+    display: initial;
 }
 
 /* FOOTER */
