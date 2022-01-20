@@ -292,7 +292,6 @@ main {
 .cards{
     display: flex;
     column-gap: 15px;
-    justify-content: space-around;
 }
 
 .card{
@@ -312,8 +311,16 @@ main {
     margin-bottom: 10px;
 }
 
-.card h5{
+.wrapper_card h5{
     color: grey;
+}
+
+.section2 h1{
+    margin-bottom: 10px;
+}
+
+.section2 h5{
+    margin-bottom: 30px;
 }
 
 /* FOOTER */
