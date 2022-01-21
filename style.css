@@ -82,6 +82,7 @@ main {
 .favicon{
     width: 28px;
     height: 28px;
+    display: none;
 }
 
 .container_menu a{
@@ -464,7 +465,6 @@ footer{
     width: 33px;
     height: 33px;
     text-align: center;
-    
 }
 
 .play i{
@@ -651,3 +651,80 @@ footer{
         margin: 0;
     }
 }
+
+/* BONUS */
+
+@media screen and (max-height: 580px) {
+    .banner{
+        display: none;
+    }
+
+    .musica{
+        padding-top: 50px;
+    }
+}
+
+.upgrade{
+    animation-duration: 3s;
+    animation-name: button;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button {
+    0% {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      30% {
+        transform: scale3d(1.25, 0.75, 1);
+      }
+    
+      40% {
+        transform: scale3d(0.75, 1.25, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.15, 0.85, 1);
+      }
+    
+      65% {
+        transform: scale3d(0.95, 1.05, 1);
+      }
+    
+      75% {
+        transform: scale3d(1.05, 0.95, 1);
+      }
+    
+      100% {
+        transform: scale3d(1, 1, 1);
+      }
+}
+
+.icon_player{
+    transition: 1s;
+    transition-timing-function: ease-out;
+}
+
+.icon_player:hover{
+    font-size: 20px;
+    color: greenyellow;
+}
+
+.wrapper_card h1{
+    transition: 1s;
+}
+
+.wrapper_card h1:hover{
+    font-size: 30px;
+    color: greenyellow;
+}
+
+.card>div>img{
+    transition: 0.5s;
+}
+
+.card>div>img:hover{
+    transform: translate(-5%,-5%);
+    border-radius: 50%;
+}
+
