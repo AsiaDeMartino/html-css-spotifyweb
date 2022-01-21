@@ -66,53 +66,43 @@ main {
     height: calc(100vh - 88px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-bottom: 10px;
-    flex-shrink: 0;  
-    overflow: auto;
+    flex-shrink: 0;
     font-weight: 700;
-}
-
-.container_sidebar{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;  
-    height: 100%;
-}
-
-.wrapper{
-    display: flex;
-    column-gap: 20px;
-}
-
-.highlight{
-    border-left: 3px solid greenyellow;
-    height: 35px;
+    overflow: auto;
 }
 
 .logo{
     min-height: 38px;
     width: 130px;
-   margin: 20px 0;
-   margin-left: 20px;
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.favicon{
+    width: 28px;
+    height: 28px;
+}
+
+.container_menu a{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
 .menu{
     padding: 5px 0;
-    display: flex;
-    align-items: center;
     color: gray;
+    position: relative;
 }
 
 .menu img{
     width: 30px;
     margin-right: 10px;
-    text-align: center;
-    vertical-align: middle;
     opacity: 0.7;
 }
 
-.menu:hover, .menu>img:hover{
+.menu:hover, .menu img:hover{
     color: white;
     opacity: 1;
 }
@@ -122,8 +112,27 @@ main {
     opacity: 1;
 }
 
+.active a{
+    padding-left: 0;
+}
+
+.container_menu .menu.active a{
+    padding-left: 20px;
+}
+
+.container_menu .menu.active a::before{
+    content: "";
+    display: block;
+    border-left: 4px solid greenyellow;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
 .playlist{
     width: 100%;
+    padding-left: 20px;
 }
 
 .playlist h3{
@@ -137,6 +146,10 @@ main {
     column-gap: 10px;
     align-items: center;
 }
+
+/* .nome_playlist{
+    overflow-y: auto;
+} */
 
 .creaplaylist i{
     font-size: 40px;
@@ -165,7 +178,11 @@ main {
 }
 
 .profile{
-    margin-left: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .profile>div>svg{
@@ -174,10 +191,11 @@ main {
     fill: white;
     background-color: gray;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 .profile span, .profile h3{
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .profile span:hover{
@@ -294,6 +312,10 @@ main {
     column-gap: 1%;
 }
 
+.section1 .cards{
+    overflow: auto;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -375,7 +397,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 10px;
+    column-gap: 1%;
     height: 88px;
     flex-basis: 227px;
     padding-left: 20px;
@@ -495,7 +517,7 @@ footer{
     align-items: center;
     justify-content: flex-end;
     column-gap: 20px;
-    width: 227px;
+    flex-basis: 227px;
     height: 88px;
     padding-right: 20px;
 }
@@ -513,3 +535,119 @@ footer{
 }
 
 
+/* RESPONSIVE */
+
+/* md */
+
+@media screen and (max-width: 878px){
+   .card{
+    width: calc(94% / 4);
+   }
+
+   .cards{
+       gap: 2%;
+   }
+
+   .brano i{
+    flex-direction: column;
+   }
+
+   .player{
+    min-width: 25%;
+    font-size: 13px;
+   }
+
+   .volume{
+       width: 200px;
+   }
+}
+
+/* s */
+
+@media screen and (max-width: 640px){
+    .card{
+     width: calc(96% / 2);
+    }
+ 
+    .cards{
+        gap: 4%;
+    }
+ 
+    .brano i{
+     flex-direction: column;
+    }
+ 
+    .player{
+     min-width: 25%;
+     font-size: 13px;
+    }
+ 
+    .volume{
+        width: 200px;
+    }
+ }
+
+/* xs */
+
+@media screen and (max-width: 552px){
+    .logo{
+        display: none;
+    }
+
+    .favicon{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .sidebar{
+        width: 50px;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .menu a{
+        padding-left: 0;
+    }
+
+    .menu a span{
+        display: none;
+    }
+
+    .menu a img{
+        margin: 0;
+    }
+    
+    .playlist{
+        display: none;
+    }
+
+    .container_menu .menu.active a::before{
+        display: none;
+    }
+    
+    .container_menu .menu.active a{
+        padding-left: 0;
+    }
+
+    .profile{
+        padding: 0;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .profile .trattino span{
+        display: none;
+    }
+
+    .profile .trattino::after{
+        display: none;
+    }
+
+    .john h3{
+        display: none;
+    }
+    
+    .profile>div>svg{
+        margin: 0;
+    }
+}
